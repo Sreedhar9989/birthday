@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Dad — A Loving Tribute</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="stage1">
+
+  <!-- canvas for particles, emojis, and stars -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <main class="container">
+
+    <!-- STAGE 1: Cake & Light Candles -->
+    <section id="stage1" class="stage card stage-1">
+      <header class="stage-head">
+        <h1>🎂 Light the Candles</h1>
+        <p class="muted">Tap <strong>Light candles</strong> to light them. Then continue to the message.</p>
+      </header>
+
+      <div class="stage-body cake-area">
+        <div class="cake-plate">
+          <div class="cake-decor"></div>
+          <div class="candles">
+            <div class="candle" style="--x:24%"><span class="flame" aria-hidden="true"></span></div>
+            <div class="candle" style="--x:50%"><span class="flame" aria-hidden="true"></span></div>
+            <div class="candle" style="--x:76%"><span class="flame" aria-hidden="true"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="stage-foot">
+        <div class="controls">
+          <button id="lightBtn" class="btn btn-accent">Light candles ✨</button>
+          <button id="nextFrom1" class="btn btn-ghost hidden">Continue ➜</button>
+        </div>
+      </footer>
+    </section>
+
+    <!-- STAGE 2 -->
+    <section id="stage2" class="stage card stage-2 hidden" aria-labelledby="greet-title">
+      <header><h1 id="greet-title">🎉 Happy Birthday, Dad</h1></header>
+      <div class="stage-body">
+        <p id="t_greet" class="muted"></p>
+      </div>
+      <footer class="stage-foot">
+        <div class="controls">
+          <button id="nextFrom2" class="btn btn-accent">Tap to continue ➜</button>
+        </div>
+      </footer>
+    </section>
+
+    <!-- STAGE 3 -->
+    <section id="stage3" class="stage card stage-3 hidden" aria-labelledby="love-title">
+      <div class="stage-grid">
+        <div class="visual"><div class="circle">💞</div></div>
+        <div>
+          <h2 id="love-title">💖 A Loving Message</h2>
+          <p id="t_love" class="muted"></p>
+          <div class="controls">
+            <button id="nextFrom3" class="btn btn-accent">Tap to continue ➜</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGE 4 -->
+    <section id="stage4" class="stage card stage-4 hidden" aria-labelledby="pts-title">
+      <header><h2 id="pts-title">A few things we want you to know</h2></header>
+      <div class="stage-body points-area">
+        <div id="points" class="points-wrap" aria-live="polite"></div>
+        <div class="controls">
+          <button id="revealBtn" class="btn btn-accent">Tap to reveal ➜</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGE 5 -->
+    <section id="stage5" class="stage card stage-5 hidden" aria-labelledby="final-title">
+      <header><h1 id="final-title" class="big-thanks">Thank you, Dad</h1></header>
+      <div class="stage-body">
+        <p id="t_final" class="sub-thanks muted"></p>
+      </div>
+      <footer class="stage-foot">
+        <div class="controls">
+          <button id="saveBtn" class="btn btn-light">Save Note</button>
+          <button id="shareBtn" class="btn btn-glow">Share Love</button>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <div id="sr-announcer" class="sr-only" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
