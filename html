@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Dad</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #b71c1c;
+            animation: pop 1.5s infinite alternate;
+        }
+
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        p {
+            font-size: 1.3em;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 25px;
+            background: #d32f2f;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #b71c1c;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎉 Happy Birthday Dad 🎉</h1>
+
+    <div class="card">
+        <p>
+            Dear Dad,<br><br>
+            You are my strength, my inspiration, and my hero.  
+            Thank you for all the sacrifices, love, and support you give every day.  
+            I’m truly blessed to have you as my father. 💖
+        </p>
+    </div>
+
+    <button onclick="showMessage()">Click for a Surprise 🎁</button>
+
+    <div id="surprise" class="card hidden">
+        <h2>🎂 You Mean the World to Me 🎂</h2>
+        <p>
+            May your life be filled with happiness, good health, and peace.  
+            I promise to make you proud always.  
+            <br><br>
+            With lots of love,  
+            <br><strong>Your Child ❤️</strong>
+        </p>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ just for you, Dad</p>
+    </footer>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("surprise").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>
